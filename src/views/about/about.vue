@@ -15,7 +15,8 @@
 						<div>
 			  				<el-col class="info_list":span='8' v-for='(list,index) in companyIntro.list' :key='index'>
 			  					<div class="img_icon">
-			  						<img :src="list.img">
+			  						<img :src="list.img" v-if='list.showImg'>
+			  						<i v-else class='iconfont flag'>&#xe66b;</i>
 			  					</div>
 			  					<p>{{list.title}}</p>
 			  					<p class="time">{{list.time}}</p>
@@ -69,6 +70,7 @@
 	</el-row>
 </template>
 <style scoped>
+	.flag{font-size: 75px;color:#58a2ef;left:50%;top:25px;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);-moz-transform:translateX(-50%);transform:translateX(-50%)}
 	.item-row{padding: 60px 0;background: #fff;}
 	.company_wrap{background: #fff;}
 	.company_team,.item-row{background: #fff;border-bottom: 30px solid #ebebeb;}
@@ -151,9 +153,9 @@
 					title:'公司简介',
 					content:'股票代码：000776.SZ，1776.HK 我们是专注于中国优质中小企业及富裕人群，拥有领先创新能力的资本市场综合服务商',
 					list:[
-						{title:'公司成立',time:'1991年',desc:'广发证券成立',img:'../../../static/images/flag.png'},
-						{title:'公司上市',time:'2015年',desc:'在深圳证券交易所上市',img:'../../../static/images/intro_market.png'},
-						{title:'营业部',time:'264个',desc:'截止2015年3月',img:'../../../static/images/intro_department.png'},
+						{title:'公司成立',time:'1991年',desc:'广发证券成立',img:'../../../static/images/flag.png',icon:'&#xe66b;',showImg:false},
+						{title:'公司上市',time:'2015年',desc:'在深圳证券交易所上市',img:'../../../static/images/intro_market.png',icon:'',showImg:true},
+						{title:'营业部',time:'264个',desc:'截止2015年3月',img:'../../../static/images/intro_department.png',icon:'',showImg:true},
 					]
 				},
 				manageTeam:{

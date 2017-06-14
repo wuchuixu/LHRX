@@ -34,6 +34,10 @@ router.beforeEach(function(to,from,next){
     }
 });
 
+router.afterEach(function(){
+    document.querySelector('body').scrollTop = 0;
+});
+
 import util from './globalurl/util.js'
 Vue.prototype.util = util;
 

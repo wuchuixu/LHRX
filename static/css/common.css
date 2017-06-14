@@ -49,11 +49,11 @@ header{width:100%;background: #fff;height: 90px;}
 .header_wrap{max-width: 1200px;background: #fff;margin:0 auto;}
 @font-face {
   font-family: 'iconfont';  /* project id 315933 */
-  src: url('//at.alicdn.com/t/font_0a6ynew06akedn29.eot');
-  src: url('//at.alicdn.com/t/font_0a6ynew06akedn29.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_0a6ynew06akedn29.woff') format('woff'),
-  url('//at.alicdn.com/t/font_0a6ynew06akedn29.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_0a6ynew06akedn29.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_5t2agzp18dcuwhfr.eot');
+  src: url('//at.alicdn.com/t/font_5t2agzp18dcuwhfr.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_5t2agzp18dcuwhfr.woff') format('woff'),
+  url('//at.alicdn.com/t/font_5t2agzp18dcuwhfr.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_5t2agzp18dcuwhfr.svg#iconfont') format('svg');
 }
 
 .iconfont{font-family: 'iconfont';color:#333;position: absolute;right: 10px;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);-moz-transform:translateY(-50%);-o-transform:translateY(-50%);}
@@ -62,9 +62,9 @@ header{width:100%;background: #fff;height: 90px;}
 .logo{width: 160px;background: url(../images/logo.png) left center no-repeat;height: 100% ;height: 90px;margin-left: 10px;}
 
 
-.copyright-share{background: #3a3a3a;padding: 0.68em 0;color:#999;}
+.copyright-share{background: #3a3a3a;color:#999;}
 .container{margin-right: auto;margin-left: auto;max-width: 100%;}
-.copyright{font-size: .9em;padding: 0;}
+.copyright{font-size: .9em;padding: 0;text-align: center;padding: 15px 0;background: #3a3a3a;color: #999;}
 .copyright-share .copyright span {
     color: #999;
     line-height: 1.8em;
@@ -73,6 +73,16 @@ header{width:100%;background: #fff;height: 90px;}
 .copyright-share .share {
     float: left;
 }
+.tips p{color: #999;font-size: 13px;line-height: 1.8;}
+.tips h3{color:#999;margin-bottom: 10px;}
+.ewm{text-align: center;color:#999;}
+.trade-day{line-height: 2;color: #999;}
+.tel{padding-top: 20px;}
+.tel img{vertical-align: middle;}
+.tel p{font-size: 36px;color:#ccc;font-family: cursive;}
+.kf{padding-left: 60px;border-left: 1px solid #3a3a3a;height: 120px;}
+.kf-title{color:#ccc;}
+.foot-top{background: #505050;padding: 40px;box-sizing: border-box;}
 
 .el-submenu .el-menu-item{padding-left: 18px !important;font-size: 14px !important;height: 50px !important;line-height: 50px !important;}
 
@@ -83,4 +93,4 @@ header{width:100%;background: #fff;height: 90px;}
     opacity: 1;
 }
 .home_banner img{width:100%;}
-img{display: block;}
+img{display: inline-block;}
