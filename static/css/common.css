@@ -1,6 +1,6 @@
  /*盒子模型为边框*/
 *{box-sizing: border-box;}
-html,body,h1,h2,h3,h4,h5,h6,p,dl,dt,dd,ul,ol,li,form,fieldset,button,input,textarea { margin: 0; padding: 0; -webkit-touch-callout: none; -webkit-text-size-adjust: none;}
+html,body,h1,h2,h3,h4,h5,h6,p,dl,dt,dd,ul,ol,li,form,fieldset,button,input,textarea { margin: 0; padding: 0; -webkit-touch-callout: none;}
 html { -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  -webkit-tap-highlight-color: transparent;}
 body { }
 h1,h2,h3,h4,h5,h6 { font-weight: normal; font-size: 100%;}

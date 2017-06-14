@@ -11,7 +11,7 @@
 				<el-row class='item-row company_team'>
 					<el-col :span='18' :offset='3' class='company_wrap'>
 						<h3 class="title">{{companyIntro.title}}</h3>
-						<p class="content">{{companyIntro.content}}</p>
+						<p class="intro-content content">{{companyIntro.content}}</p>
 						<div>
 			  				<el-col class="info_list":span='8' v-for='(list,index) in companyIntro.list' :key='index'>
 			  					<div class="img_icon">
@@ -141,6 +141,7 @@
 	.info_list{margin-top: 40px;}
 	.company_team .btn_more{margin-top: 45px;}
 	.content{text-align: justify}
+	.intro-content{text-align: center;}
 </style>
 <script>
 	import vBanner from '../../components/banner.vue'
