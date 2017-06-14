@@ -34,7 +34,7 @@ router.beforeEach(function(to,from,next){
     }
 });
 
-router.afterEach(function(){
+router.afterEach(function(){ 
     document.querySelector('body').scrollTop = 0;
 });
 

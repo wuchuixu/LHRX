@@ -2,8 +2,8 @@
 	<el-row>
 		<el-col :sm='24'>
 			<el-col class="about-wrapper">
-				<el-col class="banner home_banner">
-					<img src="../../../static/images/about_banner.jpg" alt="" >					
+				<el-col>
+					<v-banner :bannerDatas="banners"></v-banner>
 				</el-col>
 			</el-col>
 			<el-col class='about_content'>
@@ -28,8 +28,6 @@
 						</div>
 					</el-col>
 				</el-row>
-
-
 				<!--管理团队-->
 				<el-row class='item-row manage_team'>
 					<el-col :span='18' :offset='3' class='manage_wrap'>
@@ -53,7 +51,6 @@
 						</div>
 					</el-col>
 				</el-row>
-
 				<!--企业文化-->
 				<el-row class='item-row company_cultrue'>
 					<el-col :span='18' :offset='3' class='company_wrap'>
@@ -146,9 +143,13 @@
 	.content{text-align: justify}
 </style>
 <script>
+	import vBanner from '../../components/banner.vue'
 	export default{
 		data(){
 			return {
+				banners:[
+            		{src:'../../../static/images/about_banner.jpg',link:'',alt:''}
+            	],
 				companyIntro:{
 					title:'公司简介',
 					content:'股票代码：000776.SZ，1776.HK 我们是专注于中国优质中小企业及富裕人群，拥有领先创新能力的资本市场综合服务商',
@@ -191,6 +192,9 @@
 			goTeamDetail(){
 				this.$router.push({path:'/pages/team-detail'});
 			}
+		},
+		components:{ 
+			vBanner
 		}
 	}
 </script>
