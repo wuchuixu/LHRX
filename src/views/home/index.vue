@@ -2,12 +2,12 @@
 	<el-row>
 		<el-col :sm='24'>
 			<el-col class="about-wrapper">
-				<el-col class="banner home_banner">
-					<img src="../../../static/images/home_banner.jpg" alt="" >					
+				<el-col>
+					<v-banner :bannerDatas="banners"></v-banner>
 				</el-col>
 				<el-col class="home_content">
 					<!--关于我们-->
-					<el-row   >
+					<el-row>
 					  	<el-col :span="18" :offset='3' class='about_us item-row' @click.native='goAboutUs'>
 				  			<el-col :span='8' class='img_wrap'>
 					  			<img :src="aboutUs.img" alt="">
@@ -151,9 +151,15 @@
 </style>
 
 <script>
+	import vBanner from '../../components/banner.vue'
 	export default{
 		data(){
 			return{
+				banners:[
+            		{src:'../../../static/images/default.jpg',link:'https://www.baidu.com/',alt:''},
+            		{src:'../../../static/images/default.jpg',link:'',alt:''},
+            		{src:'../../../static/images/default.jpg',link:'',alt:''},
+            	],
 				aboutUs:{
 					img:'../../../static/images/about.jpg',
 					title:'公司简介',
@@ -210,6 +216,9 @@
 				const self = this;
 				self.$router.push({path:'/pages/busness'});
 			}
+		},
+		components:{ 
+			vBanner
 		}
 	}	
 </script>
