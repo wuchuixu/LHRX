@@ -52,7 +52,19 @@
 				
 			},
 			goTop(){
-				document.body.scrollTop = 0;
+				var isScrolling = false;
+				if(isScrolling){ 
+					return
+				}else{ 
+					isScrolling = true;
+					var timer  = setInterval(function(){ 
+						document.body.scrollTop -= 100;
+						if(document.body.scrollTop <= 0){ 
+							isScrolling = false;
+							clearInterval(timer);
+						}
+					},20);
+				}
 			}
 		}
 	}
