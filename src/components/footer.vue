@@ -1,5 +1,5 @@
 <template>
-	<footer>
+	<footer id='footer'>
 		<el-col class='foot-top'>
 			<el-col :span='18' :offset='3'>
 				<el-col :span="13" class='tips'>
@@ -30,6 +30,9 @@
         </el-col>
 	</footer>
 </template>
+<style scoped>
+	footer{overflow: hidden;}
+</style>
 <script>
 	export default {
 		data(){

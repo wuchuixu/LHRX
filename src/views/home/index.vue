@@ -90,7 +90,7 @@
 	.img_wrap,.case_list{position: relative;overflow: hidden;}
 	.img_wrap img{width:100%}
 	.content{padding: 15px;}
-	.content p{color:#666;}
+	/*.content p{line-height: 24px;}*/
 	.img_wrap:after{
 		position: absolute;
 	    content: ' ';

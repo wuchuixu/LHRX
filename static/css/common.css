@@ -14,8 +14,9 @@ select,textarea { font-size: 100%; -webkit-appearance: none;appearance: none;}
 /*IOS <input>去除默认样式*/
 input[type=text]{ -webkit-appearance: none;appearance: none;border-radius: 0px;}
 html,body{font-size: 62.5%;}
-body{font-size:1.4rem;background: #ededed;font-family: Microsoft YaHei;}
+body{font-size:1.6rem;background: #ededed;font-family: Microsoft YaHei;}
 
+.app-wrapper{position: relative;}
 
 .nav{height: 90px;float: right;}
 .page_content{clear: both;}
