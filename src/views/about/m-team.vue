@@ -1,7 +1,7 @@
 <template>
 	<el-row class=''>
 		<el-col>
-			<img :src="banner" alt="">						
+			<v-banner :bannerDatas="banners"></v-banner>						
 			<!--管理团队-->
 			<el-row class='item-row manage_team'>
 				<el-col :span='18' :offset='3' class='manage_wrap'>
@@ -39,7 +39,7 @@
 	.manage_wrap .list_item:nth-child(2){padding-right: 0;}
 	.item-row{padding: 60px 0;background: #fff;}
 	.company_wrap{background: #fff;}
-	.company_team,.item-row{background: #fff;border-bottom: 30px solid #ebebeb;}
+	.company_team,.item-row{background: #fff;/*border-bottom: 30px solid #ebebeb;*/}
 	.item-row h3{font-size: 50px;text-align: center;margin:0 0 60px 0;}
 	.company_team h3,.company_cultrue h3{margin-bottom: 20px;}
 	.company_wrap .desc{font-size: 16px;text-align: center;color:#666;}
@@ -112,10 +112,13 @@
 
 </style>
 <script>
+	import vBanner from '../../components/banner.vue'
 	export default{
 		data(){
 			return{
-				banner:'../../../static/images/team_banner.jpg',
+				banners:[
+            		{src:'../../../static/images/team_banner.jpg',link:'',alt:''}
+            	],
 				txtImg:'../../../static/images/intro-inner-page.jpg',
 				aboutUsTxt:'广发证券成立于1991年，是国内首批综合类证券公司，先后于2010年和2015年分别在深圳证券交易所及香港联合交易所主板上市（股票代码：000776.SZ，1776.HK）。公司被誉为资本市场上的“博士军团”，秉承“知识图强，求实奉献；客户至上，合作共赢”的核心价值观，贯彻执行“稳健经营，持续创新；绩效导向，协同高效”的经营管理理念，在竞争激烈、复杂多变的行业环境中努力开拓、锐意进取，经受住了多次行业重大变化的考验。并以卓越的经营业绩、完善的风险管理及优质的服务成功实现持续稳健发展，多年来是中国资本市场最具影响力的证券公司之一。',
 				manageTeam:{
@@ -144,6 +147,9 @@
 			goTeamDetail(){
 				this.$router.push({path:'/pages/team-detail'});
 			}
+		},
+		components:{ 
+			vBanner
 		}
 	}
 </script>

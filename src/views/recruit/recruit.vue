@@ -36,7 +36,7 @@
 					<span>招聘职位</span>
 				</h2>
 				<el-collapse class="recuit_collapse" v-model="activeName" accordion>
-					<el-collapse-item v-for="(item,index) in jobs" :title="item.name" :name="item.index">
+					<el-collapse-item v-for="(item,index) in jobs" :title="item.name" :name="item.index" :key="index">
 					  	<div class="recuit_zhize">
 					  		<h3>岗位职责：</h3>
 					  		<p v-for="(res,idx) in item.res">{{(idx+1)+'.'+res}}</p>
@@ -90,9 +90,9 @@
         data(){
             return {
             	banners:[
-            		{src:'../../../static/images/default.jpg',link:'https://www.baidu.com/',alt:''},
-            		{src:'../../../static/images/default.jpg',link:'',alt:''},
-            		{src:'../../../static/images/default.jpg',link:'',alt:''},
+            		{src:'../../../static/images/default.jpg',link:'https://www.baidu.com/',alt:'',index:1},
+            		{src:'../../../static/images/default.jpg',link:'',alt:'',index:2},
+            		{src:'../../../static/images/default.jpg',link:'',alt:'',index:3},
             	],
             	activeName:1,
             	jobs:[

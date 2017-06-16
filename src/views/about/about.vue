@@ -149,7 +149,7 @@
 		data(){
 			return {
 				banners:[
-            		{src:'../../../static/images/about_banner.jpg',link:'',alt:''}
+            		{src:'../../../static/images/about_banner.jpg',link:'',alt:'',index:1}
             	],
 				companyIntro:{
 					title:'公司简介',

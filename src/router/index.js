@@ -1,22 +1,3 @@
-// import Vue from 'vue'
-// import Router from 'vue-router'
-
-// // Vue.use(Router)
-// var  routes = [        
-//         { path: '/', name: 'home', component: require('../views/home.vue')},
-//         { path: '/index', name:'index',redirect:{name:'home'}},   
-
-//         //关于我们
-//         {path: '/about', name: '关于我们', component: require('../views/about/about.vue'),
-//             children:[
-//                 {path:'/about/company-team',name:'公司团队',component: require('../views/about/c-team.vue'),isShow:false},
-//                 {path:'/about/manage-team',name:'管理团队',component: require('../views/about/m-team.vue'),isShow:false},
-//                 {path:'/about/company-cultrue',name:'公司文化',component: require('../views/about/c-cultrue.vue'),isShow:false},
-//             ]
-//         }          
-//     ]
-// export default routes;
-
 
 const Home = resolve => require(['../views/home.vue'], resolve)
 const Index = resolve => require(['../views/home/index.vue'], resolve)
@@ -46,7 +27,6 @@ let routes = [
         path: '/',
         component: Home,
         name: '',
-        // iconCls: 'iconfont',
         leaf: true,
         children: [{
             path: '/index',

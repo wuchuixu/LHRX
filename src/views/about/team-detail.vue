@@ -1,6 +1,8 @@
 <template>
 	<el-row class='item-row'>
-		<el-col class='simple-banner'></el-col>
+		<el-col class='simple-banner'>
+			<v-banner :bannerDatas="banners"></v-banner>
+		</el-col>
 		<el-col :span='18' :offset='3' style='margin-top:60px;margin-bottom:60px;'>
 			<el-col :span='13'>
 				<h3 class="profile-name">
@@ -19,15 +21,19 @@
 <style scoped>
 	.profile-name{font-size: 36px;color:#333;}
 	.profile-name .sex{font-size: 20px;display: inline-block;margin-left: 10px;}
-	.simple-banner{height: 8px;background: #3a89da;}
+	/*.simple-banner{height: 8px;background: #3a89da;}*/
 	.item-row{background: #fff;}
 	.content{line-height: 1.8;padding-top: 40px;border-top: 3px solid #ddd;margin-top: 45px;text-align: justify}
 	.profile-position{padding: 15px 0;margin:15px 0;font-size: 20px;color:#fff;background: #8eb5de;width: 250px;text-align: center;margin-top:30px;}
 </style>
 <script>
+	import vBanner from '../../components/banner.vue'
 	export default{
 		data(){
 			return{
+				banners:[
+            		{src:'../../../static/images/team_banner.jpg',link:'',alt:''}
+            	],
 				profile:{
 					name:'韩布寒',
 					sex:'先生',
@@ -42,6 +48,9 @@
 		},
 		methods:{
 
+		},
+		components:{ 
+			vBanner
 		}
 	}
 </script>

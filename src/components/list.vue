@@ -71,15 +71,12 @@
 				}else{ 
 					if(row.type == 1){ 
 						//跳转行业动态
-						self.activeType = 1;
 						self.$router.push({path:'/pages/industry'});
 					}else if(row.type == 2){ 
 						//跳转财经动态
-						self.activeType = 2;
 						self.$router.push({path:'/pages/finance'});
 					}else if(row.type == 3){ 
 						//跳转公司动态
-						self.activeType = 3;
 						self.$router.push({path:'/pages/firm'});
 					}
 				}

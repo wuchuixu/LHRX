@@ -22,7 +22,7 @@
         data(){
             return {
             	banners:[
-            		{src:'../../../static/images/default.jpg',link:'',alt:''}
+            		{src:'../../../static/images/default.jpg',link:'',alt:'',index:1}
             	]
             }
         },

@@ -1,7 +1,7 @@
 <template>
 	<swiper :options="options" ref="mySwiper" class="pages_banner">
 	    <!-- slides -->
-	    <swiper-slide v-for="item in bannerDatas">
+	    <swiper-slide v-for="(item,index) in bannerDatas" :key="index">
 	    	<template v-if="item.link !== ''">
 		    	<a :href="item.link" target="_blank">
 		    		<img :src="item.src" :alt="item.alt" />

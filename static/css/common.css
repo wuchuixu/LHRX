@@ -79,8 +79,8 @@ header{width:100%;background: #fff;height: 90px;}
 .ewm{text-align: center;color:#999;}
 .trade-day{line-height: 2;color: #999;}
 .tel{padding-top: 20px;}
-.tel img{vertical-align: middle;}
-.tel p{font-size: 36px;color:#ccc;font-family: cursive;}
+.tel img{position: relative;top: 4px; vertical-align: middle;}
+.tel p{font-size: 36px;color:#ccc;}
 .kf{padding-left: 60px;border-left: 1px solid #3a3a3a;height: 120px;}
 .kf-title{color:#ccc;}
 .foot-top{background: #505050;padding: 40px;box-sizing: border-box;}

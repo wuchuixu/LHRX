@@ -13,7 +13,7 @@
         data(){
             return {
             	banners:[
-            		{src:'../../../static/images/default.jpg',link:'https://www.baidu.com/',alt:''}
+            		{src:'../../../static/images/default.jpg',link:'https://www.baidu.com/',alt:'',index:1}
             	],
             	list:[
             		{ 

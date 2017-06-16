@@ -156,9 +156,9 @@
 		data(){
 			return{
 				banners:[
-            		{src:'../../../static/images/default.jpg',link:'https://www.baidu.com/',alt:''},
-            		{src:'../../../static/images/default.jpg',link:'',alt:''},
-            		{src:'../../../static/images/default.jpg',link:'',alt:''},
+            		{src:'../../../static/images/default.jpg',link:'https://www.baidu.com/',alt:'',index:1},
+            		{src:'../../../static/images/default.jpg',link:'',alt:'',index:2},
+            		{src:'../../../static/images/default.jpg',link:'',alt:'',index:3},
             	],
 				aboutUs:{
 					img:'../../../static/images/about.jpg',
