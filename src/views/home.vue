@@ -5,6 +5,7 @@
 			<router-view></router-view>
 		</div>
 		<gotop v-show='showTop' @click.native='goTop' :class='isFixed?"fixed_top":""'></gotop>
+		<news v-show='hasNews'></news>
 		<pagefooter></pagefooter>
 	</div>
 </template>
@@ -12,6 +13,7 @@
 	import pageheader from '../components/header'
 	import pagefooter from '../components/footer'
 	import gotop from '../components/gotop'
+	import news from '../components/news'
 	export default {
 		data(){
 			return {
@@ -20,19 +22,44 @@
 				scroll:'',
 				isFixed:false,
 				footerHeight:0,
-				headerHeight:0
+				headerHeight:0,
+				//无news的页面：
+				hasNews:false,
+				notContainNews:[
+				    '/index',
+				    '/recruit',
+				    '/contact',
+				    '/pages/firm',
+				    '/pages/finance',
+				    '/pages/industry'
+				]
 			}
 		},
 		components: {
 			pagefooter,
 			pageheader,
-			gotop
+			gotop,
+			news
 		},
 		mounted: function(){ 
 			const self = this;
 			self.footerHeight = document.getElementById('footer').offsetHeight;
 			self.headerHeight = document.getElementById('pageheader').offsetHeight;
-			window.addEventListener('scroll', self.handleScroll)
+			window.addEventListener('scroll', self.handleScroll);
+
+			self.$router.afterEach(function(){					
+				if(self.notContainNews.indexOf(self.$route.fullPath) != -1){
+					self.hasNews = false;
+				}else{
+					self.hasNews = true;
+				}
+			});	
+
+			
+		},
+		created(){
+			
+
 		},
 		methods: {
 			handleScroll(){

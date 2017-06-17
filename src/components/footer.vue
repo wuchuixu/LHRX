@@ -31,7 +31,7 @@
 	</footer>
 </template>
 <style scoped>
-	footer{overflow: hidden;}
+	footer{overflow: hidden;clear: both;}
 </style>
 <script>
 	export default {

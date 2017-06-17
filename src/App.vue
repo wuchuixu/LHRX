@@ -10,7 +10,7 @@
       return {
       }
     },
-    created: function(){  
+    created: function(){
     }
   }
 </script>

@@ -15,7 +15,7 @@
 </template>
 <style scoped>
 	.content{color: #333;font-size: 14px;line-height: 1.5;}
-	.about_txt img{text-align: center;margin: 60px auto 30px;}
+	.about_txt img{text-align: center;margin: 60px auto 30px;display: block;}
 	.item-row {margin-bottom: 60px;}
 </style>
 <script>

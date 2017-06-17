@@ -30,7 +30,7 @@
 							  		<el-col :span='14' class='item_list content'>
 							  			<h3 class="title">{{industryInfo.title}}</h3>
 							  			<p class="list_title" @click='goNote(list.id)' v-for='(list,index) in industryInfo.list' :key='index'>{{list.title}}</p>
-							  			<a class="more" @click=''>更多<i class="iconfont more_icon">&#xe6a7;</i></a>
+							  			<a class="more" @click='goIndustry'>更多<i class="iconfont more_icon">&#xe6a7;</i></a>
 							  		</el-col>
 						  		</el-col>
 
@@ -43,7 +43,7 @@
 							  			<p class="list_title" @click='goNote(list.id)' v-for='(list,index) in companyInfo.list' :key='index'>
 							  				{{list.title}}
 							  			</p>
-							  			<a class="more">更多<i class="iconfont more_icon">&#xe6a7;</i></a>
+							  			<a class="more" @click='goFirm'>更多<i class="iconfont more_icon">&#xe6a7;</i></a>
 							  		</el-col>
 						  		</el-col>
 					  		</el-col>
@@ -52,7 +52,7 @@
 
 					<!--股权投资-->
 					<el-row>
-					  	<el-col :span="18" :offset='3' class='stock item-row'>
+					  	<el-col :span="18" :offset='3' class='stock item-row' @click.native='goStock'>
 					  		<el-col :span='8' class='img_wrap'>
 					  			<img :src="stockInfo.img" alt="">
 					  		</el-col>
@@ -66,8 +66,8 @@
 
 					<!--案例展示-->
 					<el-row>
-						<el-col :span="18" :offset='3' class='case item-row'>
-					  		<el-col class='case_list' :gutter='8' :span='8' v-for='(item,index) in caseList' :key='index'>
+						<el-col :span="18" :offset='3' class='case'>
+					  		<el-col class='case_list' :gutter='8' :span='8'  @click.native='goCase' v-for='(item,index) in caseList' :key='index'>
 					  			<div class="img_wrap">
 					  				<img :src='item.img' alt="">
 					  			</div>
@@ -215,6 +215,18 @@
 			goBusiness(){
 				const self = this;
 				self.$router.push({path:'/pages/busness'});
+			},
+			goIndustry(){
+				this.$router.push({path:'/pages/industry'});
+			},
+			goFirm(){
+				this.$router.push({path:'/pages/firm'});
+			},
+			goStock(){
+				this.$router.push({path:'/pages/stock'});
+			},
+			goCase(){
+				this.$router.push({path:'/pages/case'});
 			}
 		},
 		components:{ 
