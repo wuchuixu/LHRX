@@ -58,8 +58,14 @@
 			
 		},
 		created(){
-			
-
+			const self = this;
+			self.$nextTick(()=>{ 
+				if(self.notContainNews.indexOf(self.$route.fullPath) != -1){
+					self.hasNews = false;
+				}else{
+					self.hasNews = true;
+				}
+			});
 		},
 		methods: {
 			handleScroll(){
