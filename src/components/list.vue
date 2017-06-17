@@ -10,7 +10,7 @@
 			</div>
 			<div class="tab_body">
 				<ul class="gg_list">
-					<li v-for="item in listData">
+					<li v-for="item in listData" @click='goNoteDetail(item)'>
 						<i class="dot"></i>
 						<span class="title">{{item.title}}</span>
 						<span class="date">{{item.date}}</span>
@@ -80,6 +80,9 @@
 						self.$router.push({path:'/pages/firm'});
 					}
 				}
+			},
+			goNoteDetail(item){
+				this.$router.push({path:'/pages/note-detail'});
 			}
 		}
 	}

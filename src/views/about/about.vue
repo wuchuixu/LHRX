@@ -68,7 +68,7 @@
 	.flag{font-size: 75px;color:#58a2ef;left:50%;top:25px;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);-moz-transform:translateX(-50%);transform:translateX(-50%)}
 	.item-row{padding: 60px 0;background: #fff;}
 	.company_wrap{background: #fff;}
-	.company_team,.item-row{background: #fff;border-bottom: 30px solid #ebebeb;}
+	.company_team,.item-row{background: #fff;}
 	.item-row h3{font-size: 50px;text-align: center;margin:0 0 60px 0;}
 	.company_team h3,.company_cultrue h3{margin-bottom: 20px;}
 	.company_wrap .desc{font-size: 16px;text-align: center;color:#666;}

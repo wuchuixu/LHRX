@@ -13,6 +13,7 @@ const Note = resolve => require(['../views/note/note.vue'], resolve)
 const Industry = resolve => require(['../views/note/industry.vue'], resolve)
 const Finance = resolve => require(['../views/note/finance.vue'], resolve)
 const Firm = resolve => require(['../views/note/firm.vue'], resolve)
+const NoteDetail = resolve => require(['../views/note/note-detail.vue'], resolve)
 
 const Business = resolve => require(['../views/business/business.vue'], resolve)
 const Stock = resolve => require(['../views/business/stock.vue'], resolve)
@@ -103,6 +104,12 @@ let routes = [
                 path: '/pages/firm',
                 component: Firm,
                 name: '公司动态'
+            },
+            {
+                path: '/pages/note-detail',
+                component: NoteDetail,
+                name: '动态详情页',
+                isHidden:true
             }
         ]
     },
