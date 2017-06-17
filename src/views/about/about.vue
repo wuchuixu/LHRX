@@ -2,9 +2,7 @@
 	<el-row>
 		<el-col :sm='24'>
 			<el-col class="about-wrapper">
-				<el-col>
-					<v-banner :bannerDatas="banners"></v-banner>
-				</el-col>
+				<v-banner :bannerDatas="banners"></v-banner>
 			</el-col>
 			<el-col class='about_content'>
 				<!--公司简介-->
@@ -149,7 +147,7 @@
 		data(){
 			return {
 				banners:[
-            		{src:'../../../static/images/about_banner.jpg',link:'',alt:'',index:1}
+            		{src:'../../../static/images/about_banner.jpg',link:'',alt:''}
             	],
 				companyIntro:{
 					title:'公司简介',
