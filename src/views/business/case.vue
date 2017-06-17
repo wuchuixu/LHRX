@@ -2,7 +2,7 @@
 	<section class="case-wrapper">
 		<v-banner :bannerDatas="banners"></v-banner>
 		<el-row class="case_content">
-			<el-col :span="16" :offset="5">
+			<el-col :span="18" :offset="3">
 				<div class="tab_header">
 					<ul>
 						<li :class="{'active':activeType == item.type}" v-for="(item,index) in tabHeaders" @click="tabChange(item)">
