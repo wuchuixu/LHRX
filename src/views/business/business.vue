@@ -27,7 +27,7 @@
 				<el-col :span='18' :offset='3'>
 					<h3 class="title">{{businessGg.title}}</h3>
 					<el-row class="business_gg_list" :gutter="30">
-						<el-col class="business_gg_item" :lg="12" :md="12" :sm="24" :xs="24" v-for="item in businessGg.list">
+						<el-col class="business_gg_item" :lg="12" :md="12" :sm="24" :xs="24" v-for="(item,index) in businessGg.list" :key="index">
 							<el-row class="business_gg_box">
 								<el-col class="business_gg_img" :lg="12" :md="12" :sm="12" :xs="24">
 									<img :src="item.img" />
@@ -52,7 +52,7 @@
 				<el-col :span='18' :offset='3'>
 					<h3 class="title">{{businessLx.title}}</h3>
 					<el-row>
-						<el-col class="business_lx_item" :span='8' v-for="item in businessLx.list">
+						<el-col class="business_lx_item" :span='8' v-for="(item,index) in businessLx.list" :key="index">
 							<i class="iconfont" v-html="item.icon"></i>
 							<p class="con">{{item.content}}</p>
 						</el-col>
@@ -218,15 +218,15 @@
 					list:[
 						{ 
 							icon:'&#xe606;',
-							content:'地址：深圳市南山区乌石头路8号天明科技大厦1201室'
+							content:`地址：${WEB_LHRX.address}`
 						},
 						{ 
 							icon:'&#xe6ed;',
-							content:'电话：95575'
+							content:`电话：${WEB_LHRX.tel}`
 						},
 						{ 
 							icon:'&#xe838;',
-							content:'邮箱：95575@gf.com.cn'
+							content:`邮箱：${WEB_LHRX.email}`
 						},
 					]
 				}

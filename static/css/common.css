@@ -62,17 +62,12 @@ header{width:100%;background: #fff;height: 90px;}
 
 .logo{width: 160px;background: url(../images/logo.png) left center no-repeat;height: 100% ;height: 90px;margin-left: 10px;}
 
-
-.copyright-share{background: #3a3a3a;color:#999;}
 .container{margin-right: auto;margin-left: auto;max-width: 100%;}
 .copyright{font-size: .9em;padding: 0;text-align: center;padding: 15px 0;background: #3a3a3a;color: #999;}
-.copyright-share .copyright span {
+.copyright span {
     color: #999;
     line-height: 1.8em;
     margin: 0 0 0 1em;
-}
-.copyright-share .share {
-    float: left;
 }
 .tips p{color: #999;font-size: 13px;line-height: 1.8;}
 .tips h3{color:#999;margin-bottom: 10px;}

@@ -4,11 +4,11 @@
 		<el-row class="contact_content" >
 			<el-col :span="18" :offset="3">
 				<h2>公司总部</h2>
-				<p>地址：深圳市南山区乌石头路8号天明科技大厦1201室</p>
-				<p>邮编：518000</p>
+				<p>地址：{{address}}</p>
+				<p>邮编：{{zipcode}}</p>
 				<p>交通：公交201路，B607路，81路，101路，226路，233路，237路，334路，36路，B786路</p>
-				<p>联系电话：0755-26910347(周一至周五9:00-18:00)</p>
-				<p>客服邮箱：kefu@eskworld.com</p>
+				<p>联系电话：{{tel}}(周一至周五9:00-18:00)</p>
+				<p>客服邮箱：{{email}}</p>
 			</el-col>
 			<el-col :span="18" :offset="3" style="margin-top:20px;">
 				<div style="width:100%;height:400px;border:#ccc solid 1px;" id="dituContent"></div>
@@ -21,6 +21,10 @@
     export default {
         data(){
             return {
+                tel:WEB_LHRX.tel,
+                email:WEB_LHRX.email,
+                zipcode:WEB_LHRX.zipcode,
+                address:WEB_LHRX.address,
             	banners:[
             		{src:'../../../static/images/default.jpg',link:'',alt:'',index:1}
             	]

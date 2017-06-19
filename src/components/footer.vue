@@ -18,15 +18,13 @@
 					<p class="trade-day">交易日8:30-21:00</p>
 					<div class="tel">
 						<el-col :span='4'><img src='../../static/images/tel.png' /></el-col>
-						<el-col :span='20'><p>25678931</p></el-col>							
+						<el-col :span='20'><p>{{tel}}</p></el-col>							
 					</div>
 				</el-col>
 			</el-col>
 		</el-col>
         <el-col class="copyright">
-            <span>粤ICP备11070729号</span>
-            <span>广发证券股份有限公司版权所有</span>
-            <span>Copyright © 2000-<em id="curYear">2017</em> All Rights Reserved</span>
+            <span>{{copyright}}</span>
         </el-col>
 	</footer>
 </template>
@@ -37,7 +35,8 @@
 	export default {
 		data(){
 			return {
-				
+				tel:WEB_LHRX.tel,
+				copyright:WEB_LHRX.copyright
 			}
 		}		
 	}	

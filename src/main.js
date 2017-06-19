@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import Router from 'vue-router'
 import routes from './router'
+import WEB_LHRX from './assets/js/webconfig.js'
 Vue.config.productionTip = false
 
 Vue.use(Router)
@@ -15,6 +16,7 @@ var router =  new Router({
 	
 
 // 全局变量
+window.WEB_LHRX = WEB_LHRX;
 // 后台请求数据接口
 import urls from './globalurl/url.js'
 Vue.prototype.globalurl = urls;
